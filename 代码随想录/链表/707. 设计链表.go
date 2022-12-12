@@ -63,7 +63,7 @@ func (this *MyLinkedList) AddAtIndex(index int, val int) { // 找到index - 1位
 			cur = cur.Next
 		}
 		if cur != nil { // 防止index大于链表长度的非法情况的出现
-			node := &Node{Val: val}
+			node := &Node{Val: val} // 注意添加顺序
 			node.Prev = cur
 			node.Next = cur.Next
 
