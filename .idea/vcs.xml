@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/go-by-example" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/projects/byte_douyin_project" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/projects/douyin" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/projects/douyin/kitex-examples" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/projects/kitex-examples" vcs="Git" />
