@@ -34,20 +34,18 @@ func connect(root *Node) *Node {
 }
 
 // 深度
-func connect1(root *Node) *Node {
-	var traversal func(node *Node)
-	traversal = func(node *Node) {
-		if node == nil || (node.Left == nil && node.Right == nil) {
-			return
-		}
-		// 对当前节点的处理
-		node.Left.Next = node.Right // 左孩子的next指向右孩子
-		if node.Next != nil {       // 如果当前节点的next节点存在，则右孩子的next指向当前next节点的左孩子
-			node.Right.Next = node.Next.Left
-		}
-		traversal(node.Left)
-		traversal(node.Right)
+func connect(root *Node) *Node {
+
+	if root == nil || (root.Left == nil && root.Right == nil) {
+		return root
 	}
-	traversal(root)
+	// 对当前节点的处理
+	root.Left.Next = root.Right // 左孩子的next指向右孩子
+	if root.Next != nil {       // 如果当前节点的next节点存在，则右孩子的next指向当前next节点的左孩子
+		root.Right.Next = root.Next.Left
+	}
+	connect(root.Left)
+	connect(root.Right)
+
 	return root
 }
